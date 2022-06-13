@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file://home/stefan/IdeaProjects/microservices-demo/config-server-repository
+          uri: https://github.com/Zeropage-Media/spring-cloud-config-server-repository
+          username: Zeropage-Media
+          password: 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
+          clone-on-start: true
+          default-label: main
+    fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloud_Pwd!
+
