@@ -8,12 +8,11 @@ spring:
 #          uri: file://home/stefan/IdeaProjects/microservices-demo/config-server-repository
           uri: https://github.com/Zeropage-Media/spring-cloud-config-server-repository
           username: Zeropage-Media
-          password: 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
+          password: '{cipher}79c8f87dd005b4f482d77ad1a6fc93bfd61b87ab132b302b07ba3189136a6c45f4143fb30960a02121f426a9eebe32c353bbae2b9193b913f204242811b0350f'
           clone-on-start: true
           default-label: main
     fail-fast: true
   security:
     user:
       name: spring_cloud_user
-      password: springCloud_Pwd!
-
+      password: '{cipher}f671700e84fcdcdd1469b0874bbd651082500abc69ddeec573c9b7ad00bfa1ea3b45cc6da4169eb75aae2e76b87ae46b'
