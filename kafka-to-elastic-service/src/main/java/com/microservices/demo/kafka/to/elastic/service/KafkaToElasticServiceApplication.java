@@ -11,3 +11,4 @@ public class KafkaToElasticServiceApplication {
         SpringApplication.run(KafkaToElasticServiceApplication.class, args);
     }
 }
+

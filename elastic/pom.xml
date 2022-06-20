@@ -13,7 +13,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>elastic-model</module>
+        <module>elastic-config</module>
         <module>elastic-index-client</module>
     </modules>
+
 
 </project>

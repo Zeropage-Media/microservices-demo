@@ -52,7 +52,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                  <configuration>
+                <configuration>
                     <image>
                         <name>${project.groupId}/twitter.to.kafka.service:${project.version}</name>
                     </image>
@@ -68,5 +68,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
