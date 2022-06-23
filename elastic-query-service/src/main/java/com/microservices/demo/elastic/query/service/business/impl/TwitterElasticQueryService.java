@@ -5,7 +5,6 @@ import com.microservices.demo.elastic.query.client.service.ElasticQueryClient;
 import com.microservices.demo.elastic.query.service.business.ElasticQueryService;
 import com.microservices.demo.elastic.query.service.model.ElasticQueryServiceResponseModel;
 import com.microservices.demo.elastic.query.service.model.assembler.ElasticQueryServiceResponseModelAssembler;
-import com.microservices.demo.elastic.query.service.transformer.ElasticToResponseModelTransformer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
