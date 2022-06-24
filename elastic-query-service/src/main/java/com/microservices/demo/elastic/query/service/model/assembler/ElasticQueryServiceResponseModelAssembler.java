@@ -30,7 +30,7 @@ public class ElasticQueryServiceResponseModelAssembler
                 elasticToResponseModelTransformer.getResponseModel(twitterIndexModel);
         responseModel.add(
                 linkTo(methodOn(ElasticDocumentController.class)
-                        .getDocumentsById((twitterIndexModel.getId())))
+                        .getDocumentById((twitterIndexModel.getId())))
                         .withSelfRel());
 
         responseModel.add(
