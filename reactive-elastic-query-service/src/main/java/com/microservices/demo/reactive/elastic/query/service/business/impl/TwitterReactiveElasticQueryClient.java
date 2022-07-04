@@ -12,7 +12,7 @@ import reactor.core.publisher.Flux;
 import java.time.Duration;
 
 @Service
-public class TwitterReactiveElasticQueryClient implements ReactiveElasticQueryClient {
+public class TwitterReactiveElasticQueryClient implements ReactiveElasticQueryClient<TwitterIndexModel> {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterReactiveElasticQueryClient.class);
 
@@ -26,9 +26,10 @@ public class TwitterReactiveElasticQueryClient implements ReactiveElasticQueryCl
         this.elasticQueryServiceConfigData = configData;
     }
 
+
     @Override
     public Flux<TwitterIndexModel> getIndexModelByText(String text) {
-        LOG.info("Getting data from elastisearch for text {}", text);
+        LOG.info("Getting data from elasticsearch for text {}", text);
         return elasticQueryRepository
                 .findByText(text)
                 .delayElements(Duration.ofMillis(elasticQueryServiceConfigData.getBackPressureDelayMs()));

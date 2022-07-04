@@ -5,5 +5,5 @@ import reactor.core.publisher.Flux;
 
 public interface ElasticQueryService {
 
-    Flux<ElasticQueryServiceResponseModel> getDocumentByText (String text);
+    Flux<ElasticQueryServiceResponseModel> getDocumentByText(String text);
 }

@@ -2,7 +2,7 @@ spring:
   application:
     name: reactive-elastic-query-service
   profiles:
-    active: reactive-elastic_query_service
+    active: reactive_elastic_query
   cloud:
     config:
       name: reactive-elastic-query-service,config-client

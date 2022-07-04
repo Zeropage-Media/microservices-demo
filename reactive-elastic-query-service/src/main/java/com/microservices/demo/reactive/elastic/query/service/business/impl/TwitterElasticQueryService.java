@@ -13,7 +13,7 @@ import reactor.core.publisher.Flux;
 @Service
 public class TwitterElasticQueryService implements ElasticQueryService {
 
-    private final static Logger Log = LoggerFactory.getLogger(TwitterElasticQueryService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TwitterElasticQueryService.class);
 
     private final ReactiveElasticQueryClient<TwitterIndexModel> reactiveElasticQueryClient;
 
@@ -25,9 +25,10 @@ public class TwitterElasticQueryService implements ElasticQueryService {
         this.elasticToResponseModelTransformer = transformer;
     }
 
+
     @Override
     public Flux<ElasticQueryServiceResponseModel> getDocumentByText(String text) {
-        Log.info("Querying reactive elasticsearch for text {}", text);
+        LOG.info("Querying reactive elasticsearch for text {}", text);
         return reactiveElasticQueryClient
                 .getIndexModelByText(text)
                 .map(elasticToResponseModelTransformer::getResponseModel);
