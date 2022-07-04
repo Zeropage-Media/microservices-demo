@@ -12,6 +12,20 @@ elastic-query-web-client:
     content-type: 'application/vnd.api.v1+json'
     accept-type: 'application/vnd.api.v1+json'
     base-url: 'http://elastic-query-service/elastic-query-service/documents'
+    service-id: elastic-query-service
+    instances:
+      -
+        id: elastic-query-service-1
+        host: localhost
+        port: 8183
+      -
+        id: elastic-query-service-2
+        host: localhost
+        port: 8185
+  query-by-text:
+    method: POST
+    uri: "/get-document-by-text"
+    accept: ${elastic-query-web-client.webclient.accept-type}
 
 spring:
   thymeleaf:
@@ -19,5 +33,5 @@ spring:
 
 user-config:
   username: test
-  password: '{cipher}05f819787f4bc8571f2c52e829071cbdd1dfff178f80a10af3fc00191552a34a'
+  password: '{cipher}baeb90d57edb9a050b97b98a7d8cabe80ee884e6fff16c22956172459a43e54d'
   roles: USER
