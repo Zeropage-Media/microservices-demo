@@ -1,4 +1,4 @@
-package com.microservices.demo.reactive.elastic.query.service;
+package com.microservices.demo.reactive.elastic.query.web.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.microservices.demo"})
-public class ReactiveElasticQueryServiceApplication {
+public class ReactiveElasticQueryWebClientApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ReactiveElasticQueryServiceApplication.class, args);
+        SpringApplication.run(ReactiveElasticQueryWebClientApplication.class, args);
     }
 }
